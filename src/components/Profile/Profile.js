@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
+
 export default function Profile(props) {
-  const { username, tag, location, avatar, followers, views, likes } = props;
+  const { username, tag, location, avatar, stats } = props;
   return (
     <div className="profile">
       <div className="description">
@@ -11,17 +13,24 @@ export default function Profile(props) {
       <ul className="stats">
         <li>
           <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
+          <span className="quantity">{stats.followers}</span>
         </li>
         <li>
           <span className="label">Views</span>
-          <span className="quantity">{views}</span>
+          <span className="quantity">{stats.views}</span>
         </li>
         <li>
           <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
+          <span className="quantity">{stats.likes}</span>
         </li>
       </ul>
     </div>
   );
 }
+Profile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.array,
+};
