@@ -32,11 +32,14 @@ function Component(props) {
 }
 
 TransactionHistory.propTypes = {
-  items: PropTypes.array.isRequired,
-  id: PropTypes.string.isRequired,
-  type: PropTypes.string,
-  amount: PropTypes.string,
-  currency: PropTypes.string,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string,
+      amount: PropTypes.string,
+      currency: PropTypes.string,
+    })
+  ),
 };
 
 Component.propTypes = {
