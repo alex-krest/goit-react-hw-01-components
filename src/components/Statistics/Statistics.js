@@ -7,8 +7,8 @@ export default function Statistics(props) {
     <section className="statistics">
       {title && <h2 className="title">{title}</h2>}
       <ul className="stat-list">
-        {stats.map(el => (
-          <Insert key={el.id} label={el.label} percentage={el.percentage} />
+        {stats.map(({ id, label, percentage }) => (
+          <Insert key={id} label={label} percentage={percentage} />
         ))}
       </ul>
     </section>
@@ -26,6 +26,14 @@ function Insert(props) {
 }
 
 Statistics.propTypes = {
-  title: PropTypes.string,
-  stats: PropTypes.array,
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.array.isRequired,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
+};
+
+Insert.protoTypes = {
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
 };

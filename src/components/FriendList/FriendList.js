@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 export default function FriendList({ friends }) {
   return (
     <ul className="friend-list">
-      {friends.map(frend => (
+      {friends.map(({ avatar, name, isOnline, id }) => (
         <FriendListItem
-          key={frend.id}
-          avatar={frend.avatar}
-          name={frend.name}
-          isOnline={frend.isOnline}
+          key={id}
+          avatar={avatar}
+          name={name}
+          isOnline={isOnline}
         />
       ))}
     </ul>
@@ -25,26 +25,16 @@ function FriendListItem(props) {
     </li>
   );
 }
-// --------------------------------------------
-// export default function FriendList({avatar,name,isOnline}){
-// 	return(<ul className="friend-list">
-// 	<FriendListItem/>
-// 	</ul>)
-// 	};
-
-// 	function FriendListItem(avatar,name, isOnline){
-// 		return(
-// 				<li className="item">
-// 	  <span className="status"></span>
-// 	  <img className="avatar" src={avatar} alt="User avatar" width="48" />
-// 	  <p className="name">{}</p>
-// 	</li>
-// 		)
-// 	}
 
 FriendListItem.propTypes = {
-  friends: PropTypes.array,
-  avatar: PropTypes.string,
-  name: PropTypes.string,
-  isOnline: PropTypes.bool,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.array.isRequired,
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
 };
