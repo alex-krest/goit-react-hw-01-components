@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import './Statistics.css';
 
 //      ВАРИАНТ 1----не получается сделать ключ-----------------
 export default function Statistics(props) {

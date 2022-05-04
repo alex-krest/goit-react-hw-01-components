@@ -12,7 +12,10 @@ export const App = () => {
     <div
       style={{
         height: '100vh',
-        display: 'flex',
+        //   display: 'flex',
+        width: ' 680px',
+        margin: '0 auto',
+        textAlign: 'center',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import './Profile.css';
 
 export default function Profile(props) {
   const {
