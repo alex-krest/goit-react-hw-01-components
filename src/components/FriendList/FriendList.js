@@ -21,9 +21,9 @@ function FriendListItem(props) {
   return (
     <li className="FriendList_item">
       {isOnline ? (
-        <span className="status" style={{ color: 'red' }}></span>
+        <span className="status" style={{ backgroundColor: 'green' }}></span>
       ) : (
-        <span className="status"></span>
+        <span className="status" style={{ backgroundColor: 'red' }}></span>
       )}
       <img className="avatar" src={avatar} alt="User avatar" width="48" />
       <p className="name_avatar">{name}</p>
