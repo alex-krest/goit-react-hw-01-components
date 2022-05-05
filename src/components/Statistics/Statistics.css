@@ -1,19 +1,14 @@
-.statistics {
-  padding: 20px;
-  border: 5px solid tomato;
-}
-
 .title {
   margin: 0 auto;
 }
 
 .stat-list {
+  padding: 0px;
+  margin: 0;
   display: flex;
   justify-content: space-between;
-  /* padding: 0 auto; */
-  margin: 0 auto;
 }
 
-li {
+.item {
   flex-grow: 1;
 }

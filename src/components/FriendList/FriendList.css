@@ -1,12 +1,22 @@
 /* Лишка */
-.item {
+.friend-list {
+  padding: 0px;
+  margin-right: 40 auto;
+  margin-left: 40 auto;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.FriendList_item {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 15px;
+  padding-left: 10px;
 }
 /* Спан */
-.status {
-}
-/* Картинка */
-.avatar {
-}
-/* Пешка имя */
-.name {
+.status,
+.avata,
+.name_avatar {
+  margin: 0px;
+  padding-left: 10px;
 }

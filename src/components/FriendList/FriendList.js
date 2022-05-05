@@ -17,12 +17,16 @@ export default function FriendList({ friends }) {
 }
 
 function FriendListItem(props) {
-  const { avatar, name } = props;
+  const { avatar, name, isOnline } = props;
   return (
-    <li className="item">
-      <span className="status"></span>
+    <li className="FriendList_item">
+      {isOnline ? (
+        <span className="status" style={{ color: 'red' }}></span>
+      ) : (
+        <span className="status"></span>
+      )}
       <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
+      <p className="name_avatar">{name}</p>
     </li>
   );
 }

@@ -16,10 +16,14 @@ export default function Statistics(props) {
   );
 }
 
+function GetRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
 function Insert(props) {
   const { label, percentage } = props;
   return (
-    <li className="item">
+    <li className="item" style={{ backgroundColor: GetRandomHexColor() }}>
       <span className="label">{label}</span>
       <span className="percentage">{percentage}%</span>
     </li>

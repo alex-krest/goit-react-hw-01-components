@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import './TransactionHistory.css';
 
 export default function TransactionHistory(props) {
   const { items } = props;
