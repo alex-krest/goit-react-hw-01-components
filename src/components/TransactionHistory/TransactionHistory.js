@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
-import './TransactionHistory.css';
+import Component from './Component';
+import s from './TransactionHistory.module.css';
 
 export default function TransactionHistory(props) {
   const { items } = props;
   return (
-    <table className="transaction-history">
+    <table className={s.transaction}>
       <thead>
         <tr>
           <th>Type</th>
@@ -21,30 +22,13 @@ export default function TransactionHistory(props) {
   );
 }
 
-function Component(props) {
-  const { type, amount, currency } = props;
-  return (
-    <tr>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
-  );
-}
-
 TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      type: PropTypes.string,
-      amount: PropTypes.string,
-      currency: PropTypes.string,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
     })
   ),
-};
-
-Component.propTypes = {
-  type: PropTypes.string,
-  amount: PropTypes.string,
-  currency: PropTypes.string,
 };

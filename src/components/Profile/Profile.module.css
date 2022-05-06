@@ -18,7 +18,7 @@
   display: flex;
   justify-content: space-between;
 }
-.stats_item {
+.item {
   flex-grow: 1;
 }
 span {

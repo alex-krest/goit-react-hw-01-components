@@ -1,0 +1,12 @@
+.item {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  padding: 0px;
+}
+
+.status,
+.avatar {
+  margin: 0px;
+  padding-left: 10px;
+}

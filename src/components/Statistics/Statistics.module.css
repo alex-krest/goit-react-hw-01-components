@@ -1,14 +1,14 @@
+/* .statistics{
+	
+} */
+
 .title {
   margin: 0 auto;
 }
 
-.stat-list {
-  padding: 0px;
-  margin: 0;
+.list {
   display: flex;
   justify-content: space-between;
-}
-
-.item {
-  flex-grow: 1;
+  padding: 0;
+  margin: 0;
 }
